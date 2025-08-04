@@ -25,11 +25,6 @@ const NavigationBar = () => {
                 <li className="scroll-to-section"><a href="#faq">FAQ</a></li>
                 <li className="scroll-to-section"><a href="#contact">Contact</a></li>
                 <li>
-                  <div className="gradient-button">
-                    <a id="modal_trigger" href="#modal">
-                      <i className="fa fa-sign-in-alt"></i> Sign In Now
-                    </a>
-                  </div>
                 </li>
               </ul>
 
