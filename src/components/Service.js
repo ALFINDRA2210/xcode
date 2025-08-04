@@ -42,15 +42,6 @@ const Service = () => {
               ))}
             </Row>
 
-            <div className="mt-4">
-              <p className="text-muted small">
-                Nikmati layanan kami tanpa risiko. Batalkan kapan saja selama masa uji coba.
-              </p>
-              <a href="#" className="btn btn-primary rounded-pill px-4 py-2 shadow-sm">
-                Coba Gratis 14 Hari
-              </a>
-              <span className="d-block mt-2 text-muted small">*Tanpa Kartu Kredit</span>
-            </div>
           </Col>
 
           {/* Gambar Kanan */}

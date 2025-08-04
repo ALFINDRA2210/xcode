@@ -1053,6 +1053,11 @@ Services Style
 
 .services:after {
   content: "";
+<<<<<<< HEAD
+=======
+  /* background-image: url(../images/services-left-dec.png); */
+  content: "";
+>>>>>>> 9a4b546b2c16ab5ed27324c539071d79dad0e5ef
   background-image: url(../images/services-left-dec.png);
   background-repeat: no-repeat;
   position: absolute;
