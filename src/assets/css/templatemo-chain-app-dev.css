@@ -1052,13 +1052,15 @@ Services Style
 }
 
 .services:after {
-<<<<<<< HEAD
   content: '';
   /* background-image: url(../images/services-left-dec.png); */
-=======
+  /* background-image: url(../images/services-left-dec.png);
+
   content: "";
-  background-image: url(../images/services-left-dec.png);
->>>>>>> d709b8807b40690783ad6b81e3598233fa82bd5c
+  /* background-image: url(../images/services-left-dec.png); */
+  /* content: "";
+  background-image: url(../images/services-left-dec.png); */ 
+
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
