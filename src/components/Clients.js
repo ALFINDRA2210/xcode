@@ -54,9 +54,6 @@ const PentestPurpose = () => {
         {/* Header Section */}
         <Row className="mb-5 text-center">
           <Col>
-            <Badge bg="primary" className="px-3 py-2 mb-3 fs-6 fw-normal">
-              🔒 Cyber Security Excellence
-            </Badge>
             <h2 className="display-5 fw-bold text-dark mb-3">
               Tujuan Pentest & 
               <span className="text-primary"> Kriteria Kami</span>
