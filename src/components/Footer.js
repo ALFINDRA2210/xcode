@@ -32,10 +32,10 @@ const Footer = () => {
                 (Timur Gembira Loka Zoo)
               </p>
               <p className="fw-bold">
-                Phone: <a href="#">0858 0394 6032</a>
+                Phone: <a href="https://wa.me/6285803946032" target="_blank" rel="noreferrer">0858 0394 6032</a>
               </p>
               <p className="fw-bold">
-                Email: <a href="#">admin@xcodetraining.com</a>
+                Email: <a href="mailto:admin@xcodetraining.com">admin@xcodetraining.com</a>
               </p>
             </div>
           </Col>

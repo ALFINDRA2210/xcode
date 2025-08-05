@@ -12,24 +12,48 @@ const teamMembers = [
     position: "Lead Penetration tester",
     img: kurniawan,
     delay: "0.1s",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/masterkurniawan/",
+      instagram: "https://instagram.com/kokokurniawanjogja",
+      facebook: "#",
+      twitter: "#",
+    },
   },
   {
     name: "DyanGalih, S.Kom.",
     position: "Penetration Tester\nStaff Xcode",
     img: dyan,
     delay: "0.3s",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/dyangalih/",
+      instagram: "#",
+      facebook: "#",
+      twitter: "#",
+    },
   },
   {
     name: "Mas Sani",
     position: "Project Manager\nPenetration Tester",
     img: sani,
     delay: "0.1s",
+    socials: {
+      linkedin: "#",
+      instagram: "#",
+      facebook: "#",
+      twitter: "#",
+    },
   },
   {
     name: "Mbak Gizka",
     position: "Penetration Tester\nStaff Xcode",
     img: gizka,
     delay: "0.6s",
+    socials: {
+      linkedin: "#",
+      instagram: "#",
+      facebook: "#",
+      twitter: "#",
+    },
   },
 ];
 
@@ -41,7 +65,9 @@ const Team = () => {
           className="section-title position-relative text-center mb-5 pb-2 wow fadeInUp"
           data-wow-delay="0.1s"
         >
-          <h6 className="position-relative d-inline text-primary ps-4">Our Team</h6>
+          <h6 className="position-relative d-inline text-primary ps-4">
+            Our Team
+          </h6>
           <h2 className="mt-2">Meet Our Team Members</h2>
         </div>
         <Row className="g-4">
@@ -59,15 +85,19 @@ const Team = () => {
                     className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
                     style={{ width: "75px" }}
                   >
-                    {["facebook-f", "twitter", "instagram", "linkedin-in"].map((icon, idx) => (
-                      <a
-                        key={idx}
-                        className="btn btn-square text-primary bg-white my-1"
-                        href="#"
-                      >
-                        <i className={`fab fa-${icon}`}></i>
-                      </a>
-                    ))}
+                    {Object.entries(member.socials).map(
+                      ([platform, url], idx) => (
+                        <a
+                          key={idx}
+                          className="btn btn-square text-primary bg-white my-1"
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={`fab fa-${platform}`}></i>
+                        </a>
+                      )
+                    )}
                   </div>
                   <img
                     className="img-fluid rounded w-100"
@@ -77,7 +107,11 @@ const Team = () => {
                 </div>
                 <div className="px-4 py-3">
                   <h5 className="fw-bold m-0">{member.name}</h5>
-                  <small dangerouslySetInnerHTML={{ __html: member.position.replace(/\n/g, "<br />") }} />
+                  <small
+                    dangerouslySetInnerHTML={{
+                      __html: member.position.replace(/\n/g, "<br />"),
+                    }}
+                  />
                 </div>
               </div>
             </Col>
