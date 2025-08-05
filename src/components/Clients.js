@@ -73,7 +73,7 @@ const PentestPurpose = () => {
             {/* Benefits Cards */}
             <div className="mb-4">
               <h4 className="fw-bold text-dark mb-4">
-                📊 Mengapa Pentest Penting?
+                Mengapa Pentest Penting?
               </h4>
               <Row className="g-3">
                 {benefits.map((benefit, index) => (
@@ -121,7 +121,7 @@ const PentestPurpose = () => {
             {/* Services Section */}
             <div>
               <h4 className="fw-bold text-dark mb-4">
-                🛠️ Layanan yang Kami Sediakan
+                Layanan yang Kami Sediakan
               </h4>
               <Row className="g-3">
                 {services.map((service, index) => (
