@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import introImg from "../img/layanan/logo.jpg"; // Ganti dengan gambar yang sesuai (contoh: slider-dec.png)
+import introImg from "../img/layanan/logo2.png"; // Ganti dengan gambar yang sesuai (contoh: slider-dec.png)
 import "../assets/css/templatemo-chain-app-dev.css"; // Kalau masih digunakan
 import "../assets/css/animated.css"; // Untuk animasi wow
 import "../assets/css/owl.css"; // Jika slider dipakai
@@ -47,7 +47,11 @@ const Intro = () => {
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
                 >
-                  <img src={introImg} alt="Penetration Testing" className="img-fluid" />
+                  <img
+                    src={introImg}
+                    alt="Penetration Testing"
+                    className="img-fluid"
+                  />
                 </div>
               </Col>
             </Row>

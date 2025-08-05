@@ -1,91 +1,78 @@
 import React, { useState } from "react";
 import logo from "../img/logo.png";
+import "../assets/css/templatemo-chain-app-dev.css";
 
 const NavigationBar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Toggle menu on mobile
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
+  // Close menu when link clicked
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <>
-      <style>{`
-        @media (max-width: 991px) {
-          .main-nav .nav {
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            background: #fff;
-            padding: 15px;
-            margin-top: 10px;
-          }
+    <header
+      className="header-area header-sticky wow slideInDown"
+      data-wow-duration="0.75s"
+      data-wow-delay="0s"
+    >
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <nav className="main-nav d-flex justify-content-between align-items-center">
+              {/* Logo */}
+              <a href="/" className="logo">
+                <img src={logo} alt="Xcode Logo" />
+              </a>
 
-          .main-nav .nav.show {
-            display: block;
-          }
+              {/* Menu Trigger */}
+              <div
+                className={`menu-trigger d-lg-none ${isMenuOpen ? "active" : ""}`}
+                onClick={toggleMenu}
+              >
+                <span>Menu</span>
+              </div>
 
-          .menu-trigger {
-            display: block;
-            cursor: pointer;
-            user-select: none;
-          }
-        }
-
-        @media (min-width: 992px) {
-          .menu-trigger {
-            display: none;
-          }
-        }
-      `}</style>
-
-      <header
-        className="header-area header-sticky wow slideInDown"
-        data-wow-duration="0.75s"
-        data-wow-delay="0s"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <nav className="main-nav">
-                {/* Logo */}
-                <a href="/" className="logo ms-3">
-                  <img src={logo} alt="Xcode Logo" />
-                </a>
-
-                {/* Navigation Menu */}
-                <ul className={`nav ${menuOpen ? "show" : ""}`}>
-                  <li className="scroll-to-section">
-                    <a href="#top" className="active" onClick={closeMenu}>Home</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="#about" onClick={closeMenu}>About</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="#service" onClick={closeMenu}>Pentest Service</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="#faq" onClick={closeMenu}>FAQ</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="#contact" onClick={closeMenu}>Contact</a>
-                  </li>
-                </ul>
-
-                {/* Trigger untuk Mobile */}
-                <a className="menu-trigger" onClick={toggleMenu}>
-                  <span>Menu</span>
-                </a>
-              </nav>
-            </div>
+              {/* Navigation Links */}
+              <ul className={`nav ${isMenuOpen ? "d-block" : "d-none d-lg-flex"} align-items-center m-0`}>
+                <li className="scroll-to-section">
+                  <a href="#top" onClick={handleLinkClick}>
+                    Home
+                  </a>
+                </li>
+                <li className="scroll-to-section">
+                  <a href="#about" onClick={handleLinkClick}>
+                    About
+                  </a>
+                </li>
+                <li className="scroll-to-section">
+                  <a href="#service" onClick={handleLinkClick}>
+                    Pentest Service
+                  </a>
+                </li>
+                <li className="scroll-to-section">
+                  <a href="#faq" onClick={handleLinkClick}>
+                    FAQ
+                  </a>
+                </li>
+                <li className="scroll-to-section">
+                  <a href="#contact" onClick={handleLinkClick}>
+                    Contact
+                  </a>
+                </li>
+                <li>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

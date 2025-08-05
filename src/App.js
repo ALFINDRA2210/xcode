@@ -3,6 +3,8 @@ import './App.css';
 import './assets/css/templatemo-chain-app-dev.css';
 import './assets/css/animated.css';
 import './assets/css/owl.css';
+import './assets/css/fontawesome.css';
+import './assets/css/style.css';
 
 // Komponen
 import NavigationBar from './components/NavigationBar';
